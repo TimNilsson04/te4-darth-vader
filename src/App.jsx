@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import './StarWarsIntro.css'
 import Spinner from './components/Spinner'
 
 function App() {
@@ -39,15 +40,42 @@ function App() {
 
   return (
     <>
-      <h1>DARTH VÄDER wienebröö</h1>
-      {weatherData.main ? (
-        <>
-          <h2>City: {weatherData.name}</h2>
-          <h2>Temperature: {(weatherData.main.temp - 273.15).toFixed(2)}</h2>
-        </>
-      ) : (
-        <Spinner />
-      )}
+      <div className='star-wars-intro'>
+        <p className='intro-text'>Today's weather...</p>
+        <h2 className='main-logo'>
+          WEATHER FORECAST
+        </h2>
+        <div className='main-content'>
+          <div className='title-content'>
+            <p className='content-header'>IN A GALAXY NOT THAT FAR AWAY</p>
+            <p className='content-body'>DARTH VÄDER</p>
+            {weatherData.main ? (
+              <>
+                <p className='content-body'>City: {weatherData.name}</p>
+                <p className='content-body'>Temperature: {(weatherData.main.temp - 273.15).toFixed(2)}</p>
+                <a href="#weather" className="space-button">See the weather</a>
+              </>
+            ) : (
+              <Spinner />
+            )}
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <div className='container'>
+          {weatherData.main ? (
+            <>
+              <div >
+                <h2 id='weather'>City: {weatherData.name}</h2>
+                <h2>Temperature: {(weatherData.main.temp - 273.15).toFixed(2)}</h2>
+              </div>
+            </>
+          ) : (
+            <Spinner />
+          )}
+        </div>
+      </section>
     </>
   )
 }
