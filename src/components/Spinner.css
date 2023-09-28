@@ -1,5 +1,8 @@
 .loader {
-    margin-left: 14.6rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     border: 16px solid #f3f3f3;
     /* Light grey */
     border-top: 16px solid #3498db;
