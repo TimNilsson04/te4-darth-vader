@@ -1,3 +1,9 @@
+/* @font-face {
+  font-family: "Star-Wars";
+  src: url("./assets/Starjedi.ttf");
+
+} */
+
 #root {
   --base-font: sans-serif;
   --color-fg: #000000;
@@ -7,7 +13,7 @@
 
 body {
   height: 100%;
-  font-family: var(--base-font);
+  /* font-family: "Star-Wars"; */
   color: var(--color-bg);
   background-color: var(--color-fg);
   text-align: center;
@@ -24,7 +30,6 @@ body {
   background-size: cover;
   width: 100%;
   height: 100%;
-  font-family: "Droid Sans", arial, verdana, sans-serif;
   font-weight: 700;
   color: #EBD71C;
   background-color: #000;

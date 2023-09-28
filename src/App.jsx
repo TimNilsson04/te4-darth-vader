@@ -41,7 +41,7 @@ function App() {
   return (
     <>
       <div className='star-wars-intro'>
-        <p className='intro-text'>Today's weather...</p>
+        <p className='intro-text'> Todays weather...</p>
         <h2 className='main-logo'>
           WEATHER FORECAST
         </h2>
